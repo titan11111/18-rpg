@@ -1,0 +1,178 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+  background: linear-gradient(to bottom, #ccf, #eef);
+  margin: 0;
+  padding: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+#gold-display,
+#weapon-display,
+#mp-display {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 5px;
+  color: #333;
+  text-shadow: 1px 1px 0 #fff;
+}
+
+#mp-display {
+  color: #006;
+}
+
+#message-box {
+  background-color: #fffbe8;
+  border: 2px solid #444;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin: 10px auto;
+  width: fit-content;
+  max-width: 90%;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#field {
+  display: grid;
+  grid-template-columns: repeat(5, 60px);
+  grid-template-rows: repeat(5, 60px);
+  gap: 2px;
+  margin-bottom: 20px;
+}
+
+.cell {
+  width: 60px;
+  height: 60px;
+  border: 1px solid #888;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  background-size: cover;
+}
+
+.empty { background-color: #fff; }
+.city  { background-image: url('./images/town.png'); }
+.enemy { background-image: url('./images/enemy2.png'); }
+.player { background-color: #66f; color: white; }
+
+#town {
+  padding: 20px;
+  background-color: #ffe;
+  border: 2px solid #888;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.shop-image {
+  width: 64px;
+  height: 64px;
+  margin: 10px 0;
+}
+
+#shop-menu button {
+  margin: 5px;
+  padding: 8px 16px;
+  font-size: 16px;
+}
+
+#battle {
+  width: 320px;
+  height: 240px;
+  background-image: url('./images/battle.png');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.enemy-img {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 20px;
+  left: 120px;
+}
+
+.hp-box {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 1px 1px 0 #000;
+  text-align: left;
+}
+
+#battle-log {
+  position: absolute;
+  top: 110px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 1px 1px 0 #000;
+}
+
+.command-box {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.command-box button {
+  width: 70px;
+  height: 40px;
+  font-size: 16px;
+  background-color: #fff;
+  border: 1px solid #888;
+  border-radius: 5px;
+}
+
+#magic-menu, #item-menu {
+  position: absolute;
+  bottom: 60px;
+  left: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.magic-btn, .item-use-btn {
+  padding: 6px 12px;
+  font-size: 14px;
+  background-color: #eef;
+  border: 1px solid #88f;
+  border-radius: 5px;
+}
+
+#controller {
+  margin-top: 10px;
+}
+
+#controller button {
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+  margin: 5px;
+  border-radius: 10px;
+  border: 1px solid #888;
+  background-color: #fff;
+}

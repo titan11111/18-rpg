@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>買い物クエスト</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="game-container">
+    <div id="gold-display">所持金：0 G</div>
+    <div id="weapon-display">装備：なし</div>
+    <div id="mp-display">MP：10</div>
+    <div id="message-box" class="hidden"></div>
+
+    <div id="field"></div>
+
+    <div id="town" class="hidden">
+      <p>いらっしゃいませ！ここは街です。</p>
+      <img src="./images/shop.png" class="shop-image" alt="ショップ">
+      <p>↓で買い物／← または → で外に出よう！</p>
+      <div id="shop-menu" class="hidden">
+        <h3>武器を買う</h3>
+        <button class="item-btn" data-name="木の剣" data-price="10">木の剣（10G）</button>
+        <button class="item-btn" data-name="鉄の剣" data-price="30">鉄の剣（30G）</button>
+        <button class="item-btn" data-name="伝説の剣" data-price="100">伝説の剣（100G）</button>
+      </div>
+    </div>
+
+    <div id="battle" class="hidden">
+      <div class="hp-box">
+        <div id="player-hp">勇者HP：20</div>
+        <div id="enemy-hp">敵HP：10</div>
+      </div>
+      <img src="./images/enemy2.png" class="enemy-img" alt="敵">
+      <div id="battle-log">敵があらわれた！</div>
+      <div id="magic-menu" class="hidden">
+        <button class="magic-btn" data-name="ファイア" data-cost="3">🔥ファイア（3MP）</button>
+        <button class="magic-btn" data-name="ヒール" data-cost="5">✨ヒール（5MP）</button>
+      </div>
+      <div id="item-menu" class="hidden">
+        <button class="item-use-btn" data-name="回復薬">🧪回復薬を使う</button>
+      </div>
+      <div class="command-box">
+        <button class="command">戦う</button>
+        <button class="command">まほう</button>
+        <button class="command">どうぐ</button>
+        <button class="command">にげる</button>
+      </div>
+    </div>
+
+    <div id="controller">
+      <div><button id="up">↑</button></div>
+      <div>
+        <button id="left">←</button>
+        <button id="down">↓</button>
+        <button id="right">→</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
